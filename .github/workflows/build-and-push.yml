@@ -1,0 +1,26 @@
+name: Build and Push Docker Image
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  main:
+    name: Build and push services
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-latest ]
+    steps:
+      - name: 📥 Checkout Context
+        uses: actions/checkout@v4
+
+      - name: 🔨 Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: 📦 Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: 🚀 Build docker image `user`
+        run: docker build -t test-image:latest .
