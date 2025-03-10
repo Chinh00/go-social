@@ -23,4 +23,4 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: 🚀 Build docker image `user`
-        run:  docker build -t test-image.yml . -f .\dockerfiles\Dockerfile-user
+        run:  docker build -t test-image.yml . -f ./dockerfiles/Dockerfile-user
