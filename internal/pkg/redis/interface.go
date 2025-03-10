@@ -1,8 +1,12 @@
 package redis
 
-import "time"
+import (
+	"context"
+	"time"
+)
 
-type RedisService[T any] interface {
-	Set(key string, value *T, expiration time.Duration)
-	Get(key string) (*T, error)
+type Service[T any] interface {
+	Set(ctx context.Context, key string, value *T, expiration time.Duration) (*T, error)
+	Get(ctx context.Context, key string) (*T, error)
+	Remove(ctx context.Context, key string) (*T, error)
 }

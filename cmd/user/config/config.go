@@ -3,12 +3,14 @@ package config
 import (
 	"github.com/ilyakaznacheev/cleanenv"
 	"go-social/internal/pkg/core"
+	"go-social/internal/pkg/redis"
 	"os"
 )
 
 type Config struct {
 	core.App
 	core.Http
+	redis.RedisOption `yml:"redis"`
 }
 
 func NewConfig() (*Config, error) {
