@@ -3,14 +3,12 @@ package config
 import (
 	"github.com/ilyakaznacheev/cleanenv"
 	"go-social/internal/pkg/core"
-	"go-social/internal/pkg/database"
 	"os"
 )
 
 type Config struct {
 	core.App
 	core.Http
-	database.PostgresConfig `yaml:"postgres"`
 }
 
 func NewConfig() (*Config, error) {
