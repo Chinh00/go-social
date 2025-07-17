@@ -9,7 +9,7 @@ require (
 	github.com/labstack/echo/v4 v4.13.3
 	github.com/redis/go-redis/v9 v9.7.1
 	github.com/swaggo/echo-swagger v1.4.1
-	github.com/swaggo/swag v1.16.4
+	github.com/swaggo/swag v1.16.5
 	gorm.io/driver/postgres v1.5.11
 	gorm.io/gorm v1.25.12
 )
@@ -43,6 +43,7 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	golang.org/x/crypto v0.32.0 // indirect
+	golang.org/x/mod v0.21.0 // indirect
 	golang.org/x/net v0.34.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.29.0 // indirect
